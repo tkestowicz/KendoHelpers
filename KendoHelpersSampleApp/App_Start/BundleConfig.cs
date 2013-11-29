@@ -20,9 +20,14 @@ namespace KendoHelpersSampleApp
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/kendo").Include("~/Scripts/kendo.all.min.js",
+                "~/Scripts/kendo.aspnetmvc.min.js"));
+
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      "~/Content/site.css",
+                      "~/Content/kendo.common.min.css",
+                      "~/Content/kendo.default.min.css"));
         }
     }
 }

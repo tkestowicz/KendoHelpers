@@ -13,7 +13,7 @@ namespace KendoHelpersSampleApp.Controllers
 
         public ActionResult ReadPeople([DataSourceRequest] DataSourceRequest request)
         {
-            return Json(dataContext.People.ToDataSourceResult(
+            return Json(dataContext.FindAllPeople().ToDataSourceResult(
                 request.SortAttributesMapping(PeopleExtensions.SortMappings)
                         .GroupAttributesMapping(PeopleExtensions.GroupMappings)
                         .FilterAttributesMapping(PeopleExtensions.FilterMappings))
